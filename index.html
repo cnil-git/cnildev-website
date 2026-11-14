@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-theme="soil">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Cyrus Nilforooshan</title>
+    <meta
+      name="description"
+      content="Cyrus Nilforooshan: embedded engineer, full stack developer, and biophile. Building Monstera Lang, a programming language for embedded systems."
+    />
+    <meta name="author" content="Cyrus Nilforooshan" />
+    <meta name="theme-color" content="#140b04" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cyrus Nilforooshan" />
+    <meta
+      property="og:description"
+      content="Embedded engineer, full stack developer, and biophile. Building Monstera Lang."
+    />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body>
+    <a class="skip" href="#screen">Skip to content</a>
+    <canvas id="ambient" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="shell" id="shell">
+      <header class="bar">
+        <a class="brand" href="/" data-nav="/" aria-label="Home">
+          <span class="brand-logo" id="brand-logo"></span>
+          <span class="brand-text">
+            <span class="brand-user">cyrus</span><span class="brand-at">@</span><span class="brand-host">monstera</span>
+          </span>
+        </a>
+        <div class="tabs-wrap" id="tabs-wrap">
+          <button class="tab-arrow left" type="button" tabindex="-1" aria-label="Scroll pages left"><span>&lt;&lt;</span></button>
+          <nav class="tabs" id="tabs" aria-label="Pages"></nav>
+          <button class="tab-arrow right" type="button" tabindex="-1" aria-label="Scroll pages right"><span>&gt;&gt;</span></button>
+        </div>
+        <div class="status" aria-hidden="true">
+          <span class="status-dot"></span>
+          <span id="clock">--:--</span>
+        </div>
+      </header>
+
+      <main class="screen" id="screen" tabindex="-1">
+        <noscript>
+          <section class="page">
+            <h1>Cyrus Nilforooshan</h1>
+            <p>
+              Embedded engineer, full stack developer, and biophile. Firmware captain of Longhorn
+              Baja Racing, building Monstera Lang, a programming language for embedded systems.
+            </p>
+            <p>This site is an interactive terminal and needs JavaScript. You can also find me at
+              <a href="https://github.com/cnil-git">github.com/cnil-git</a>.</p>
+          </section>
+        </noscript>
+      </main>
+
+      <div class="dock">
+        <div class="chips" id="chips" aria-label="Suggested commands"></div>
+        <form class="prompt" id="prompt" autocomplete="off">
+          <label class="ps1" for="cmd" id="ps1"></label>
+          <div class="line" id="line" aria-hidden="true"></div>
+          <input
+            id="cmd"
+            name="cmd"
+            type="text"
+            inputmode="text"
+            enterkeyhint="go"
+            autocapitalize="off"
+            autocorrect="off"
+            spellcheck="false"
+            aria-label="Command"
+            aria-describedby="cmd-hint"
+          />
+          <span class="sr-only" id="cmd-hint">Type a command such as help, ls, or cd projects, then press Enter.</span>
+          <button class="run" type="submit" aria-label="Run command">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M13 6l6 6-6 6" /></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="sr-only" aria-live="polite" id="announcer"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
