@@ -1,0 +1,23 @@
+{
+  "name": "cnildev-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "check:ascii": "node scripts/check-ascii.mjs",
+    "bundle": "pnpm build && rm -f site.zip && cd dist && zip -qr ../site.zip ."
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0"
+  }
+}
